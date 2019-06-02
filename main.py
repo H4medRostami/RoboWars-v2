@@ -62,8 +62,8 @@ def get_status():
     print("-------------------------------------")
     print("⚡R1 energy status:{}       ⚡R2 energy status:{} ".format(r1.energy, r2.energy))
 
-    print("⭐🌐🌍🌏🌏🌍🌍🌍🌍🌍🌍🌏🌏📍📍🌐🌐🗺🗺🗺🗺🗺🗺R1 Current Location:{}      ⭐R2 Current Location:{} ".format(r1.location, r2.location))
-    print("---🌐🌐🌐🌐----------------------------------")
+    print("⭐R1 Current Location:{}      ⭐R2 Current Location:{} ".format(r1.location, r2.location))
+    print("-------------------------------------")
 
 
 # get user entry action and show status of energy and location
