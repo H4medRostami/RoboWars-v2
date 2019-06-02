@@ -31,7 +31,7 @@ class WarRobot:
         else:
             self._energy = value
 
-    # get parameter of move or shot and calculate energy usage
+    # get type of action 'move or shot' and calculate energy usage
     def energy_calc(self, arg):
         distance = abs(self.location - self.enemy.location)
         if arg == 'move':
@@ -44,7 +44,7 @@ class WarRobot:
                 result = 0
             self.enemy.energy -= result
 
-    # check robots doesnt in same location and pass another robot then pass to energy_calc to calculate energy
+    # Check if robots doesn't belong in same location and pass eachother then call energy_calc to calculate energy
     def move(self):
         temp = self.location
      
@@ -64,7 +64,7 @@ class WarRobot:
             self.energy_calc('move')
             return ''
 
-    # shot is reverse right take damage pass to energy_calc to calculate energy.
+    # shot missile then calculate competitor energy
     def shot(self):
         self.energy_calc('shot')         
 
