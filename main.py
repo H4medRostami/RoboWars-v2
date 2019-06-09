@@ -5,7 +5,7 @@ from BotClass import WarRobot
 
 
 # check sum of ability entry
-def input_sum_check(robot, a, d, s):
+def input_sum_check(robot: str, a: int, d: int, s: int) -> None:
     if a+d+s > 10 or a+d+s < 10:
         print("sum of numbers must be 10 , Please enter it again: ")
         get_input(robot)
@@ -17,7 +17,7 @@ random.shuffle(first_position)
 
 
 # first input that get entry for robots ability from user except location that set random
-def get_input(robot):
+def get_input(robot: str) -> int:
     try:
         a = input("Enter ordinary Attack " + robot + ":")
         print("Attack:", a)
@@ -50,7 +50,7 @@ print('''\n\n⚐⚐⚐Game Start⚐⚐⚐\n\n  instruction:\n\n * press 1 #steps
 
 
 # joy steak get action of robot from user
-def JoySteak(action, usr):
+def JoySteak(action: int, usr: obj) -> None:
     if action == 1:
         print(usr.move())
     elif action == 2:
@@ -58,7 +58,7 @@ def JoySteak(action, usr):
 
 
 # general energy and location status
-def get_status():
+def get_status() -> None:
     print("-------------------------------------")
     print("⚡R1 energy status:{}       ⚡R2 energy status:{} ".format(r1.energy, r2.energy))
 
