@@ -25,6 +25,8 @@ class WarRobot:
     # energy attribute setter , also check robot Die.
     @energy.setter
     def energy(self, value):
+        if not isinstance(value, int):
+            raise TypeError('get only integer!')
         if value <= 0:
             print(self.name, ": *****************Game Over!***************** ")
             sys.exit()
