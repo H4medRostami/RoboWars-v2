@@ -6,7 +6,7 @@ from BotClass import WarRobot
 
 # check sum of ability entry
 def input_sum_check(robot: str, a: int, d: int, s: int) -> None:
-    if a+d+s > 10 or a+d+s < 10:
+    if a+d+s != 10:
         print("sum of numbers must be 10 , Please enter it again: ")
         get_input(robot)
 
