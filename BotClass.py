@@ -34,7 +34,7 @@ class WarRobot:
             self._energy = value
 
     # get type of action 'move or shot' and calculate energy usage
-    def energy_calc(self, arg):
+    def _energy_calc(self, arg):
         distance = abs(self.location - self.enemy.location)
         if arg == 'move':
             result = (distance/self.speed)*5
@@ -63,11 +63,11 @@ class WarRobot:
             return 'error invalid location'
         else:
             self.location = temp
-            self.energy_calc('move')
+            self._energy_calc('move')
             return ''
 
     # shot missile then calculate competitor energy
     def shot(self):
-        self.energy_calc('shot')         
+        self._energy_calc('shot')         
 
 
