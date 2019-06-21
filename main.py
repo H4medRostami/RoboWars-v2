@@ -30,11 +30,8 @@ def get_input(robot: str) -> int:
         s = int(s)
         input_sum_check(robot, a, d, s)
         return a, d, s
-    except ValueError:
+    except(ValueError, TypeError) as e:
         print("give only number and right value!\n")
-        get_input(robot)
-    except TypeError:
-        print("can not assign None value!\n")
         get_input(robot)
 
 
